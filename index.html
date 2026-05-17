@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angelo Fileccia — Real Estate Advisor | Arizona + Metro Detroit</title>
+  <meta name="description" content="Dual-market real estate advisor serving Chandler, Gilbert, Queen Creek, Scottsdale, and Metro Detroit. Warm, story-led, built to make moving smarter.">
+
+  <meta property="og:title" content="Angelo Fileccia — Real Estate Advisor">
+  <meta property="og:description" content="Dual-market real estate advisor. Chandler/East Valley + Metro Detroit.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://angelofileccia.com">
+  <meta property="og:image" content="https://angelofileccia.com/assets/headshot.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --navy: #0f2136;
+      --copper: #b87245;
+      --off-white: #f7f1e8;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, system-ui, sans-serif;
+      background: var(--navy);
+      color: var(--off-white);
+      line-height: 1.7;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 80px 24px 60px;
+    }
+
+    .hero img.headshot {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 20%;
+      border: 3px solid var(--copper);
+      margin-bottom: 32px;
+    }
+
+    .hero .tagline {
+      font-size: 0.95rem;
+      color: var(--copper);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      margin-bottom: 20px;
+      color: var(--off-white);
+      line-height: 1.15;
+    }
+
+    .hero .lede {
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      max-width: 620px;
+      margin-bottom: 40px;
+      color: rgba(247, 241, 232, 0.88);
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--copper);
+      color: var(--navy);
+      padding: 14px 36px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 18px rgba(184, 114, 69, 0.3);
+    }
+
+    section { padding: 60px 0; }
+
+    section h2 {
+      font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+      margin-bottom: 24px;
+      color: var(--copper);
+    }
+
+    section p {
+      margin-bottom: 18px;
+      color: rgba(247, 241, 232, 0.92);
+      font-size: 1.05rem;
+    }
+
+    .markets {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+      margin-top: 24px;
+    }
+
+    .market {
+      border-left: 2px solid var(--copper);
+      padding-left: 20px;
+    }
+
+    .market h3 {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+      color: var(--off-white);
+    }
+
+    .market ul { list-style: none; }
+    .market li { padding: 3px 0; color: rgba(247, 241, 232, 0.82); }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .service {
+      background: rgba(184, 114, 69, 0.08);
+      padding: 18px 22px;
+      border-radius: 4px;
+      border-left: 2px solid var(--copper);
+    }
+
+    .service strong {
+      display: block;
+      color: var(--copper);
+      font-size: 1.05rem;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .service span {
+      color: rgba(247, 241, 232, 0.82);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .reviews-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .review-link {
+      background: rgba(184, 114, 69, 0.12);
+      color: var(--off-white);
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background 0.15s, transform 0.15s;
+      border: 1px solid rgba(184, 114, 69, 0.25);
+    }
+
+    .review-link:hover {
+      background: rgba(184, 114, 69, 0.22);
+      transform: translateY(-1px);
+    }
+
+    .connect-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .connect-item {
+      background: rgba(184, 114, 69, 0.08);
+      padding: 16px 20px;
+      border-radius: 4px;
+    }
+
+    .connect-item strong {
+      display: block;
+      color: var(--copper);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    .connect-item a {
+      color: var(--off-white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      word-break: break-word;
+    }
+
+    .connect-item a:hover { color: var(--copper); }
+
+    footer {
+      padding: 40px 24px 60px;
+      text-align: center;
+      border-top: 1px solid rgba(184, 114, 69, 0.18);
+      margin-top: 40px;
+      font-size: 0.88rem;
+      color: rgba(247, 241, 232, 0.55);
+    }
+
+    footer img.footer-logo {
+      width: 50px;
+      margin-bottom: 18px;
+      opacity: 0.7;
+      border-radius: 4px;
+    }
+
+    footer p { margin-bottom: 8px; }
+
+    footer a {
+      color: var(--copper);
+      text-decoration: none;
+      margin: 0 6px;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .hero { min-height: 80vh; padding: 60px 20px 40px; }
+      .hero img.headshot { width: 140px; height: 140px; margin-bottom: 24px; }
+      section { padding: 44px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <img src="assets/headshot.jpg" alt="Angelo Fileccia" class="headshot">
+    <div class="tagline">Real Estate Advisor</div>
+    <h1>Two states. One standard.</h1>
+    <p class="lede">
+      Helping buyers, sellers, and relocators move smarter across Chandler, Gilbert, Queen Creek, Scottsdale — and Metro Detroit.
+    </p>
+    <a href="mailto:angelo.fileccia@gmail.com" class="cta">Start a conversation</a>
+  </section>
+
+  <section class="container">
+    <h2>About</h2>
+    <p>
+      A decade of real estate experience rooted in Metro Detroit, expanded to Arizona's East Valley. Built on the principle that geography should never be the bottleneck — the right advisor closes your deal whether they're in Chandler, Detroit, or somewhere in between.
+    </p>
+    <p>
+      Known for being kind, authentic, and genuinely compassionate. Brings the same warmth to a closing table as to coaching varsity tennis at Seton Catholic Preparatory in Chandler. Treats every transaction with the discipline it deserves — and the warmth it earns.
+    </p>
+  </section>
+
+  <section class="container">
+    <h2>Markets Served</h2>
+    <div class="markets">
+      <div class="market">
+        <h3>Arizona</h3>
+        <ul>
+          <li>Chandler</li>
+          <li>Gilbert</li>
+          <li>Queen Creek</li>
+          <li>Scottsdale</li>
+        </ul>
+      </div>
+      <div class="market">
+        <h3>Michigan</h3>
+        <ul>
+          <li>Metro Detroit</li>
+          <li>Southeast Michigan</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="service">
+        <strong>Buyer Representation</strong>
+        <span>First-time, move-up, second home, investment.</span>
+      </div>
+      <div class="service">
+        <strong>Seller Representation</strong>
+        <span>Strategic pricing and disciplined negotiation.</span>
+      </div>
+      <div class="service">
+        <strong>Relocation</strong>
+        <span>Cross-state moves between AZ and MI, made simple.</span>
+      </div>
+      <div class="service">
+        <strong>Investment Advisory</strong>
+        <span>Long-term hold, value-add, and portfolio strategy.</span>
+      </div>
+      <div class="service">
+        <strong>New Construction</strong>
+        <span>Builder relationships and incentive expertise across the East Valley.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2>Reviews</h2>
+    <p>What clients say lives across multiple platforms — pick the one you trust most:</p>
+    <div class="reviews-links">
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Angelo+Fileccia+Real+Estate+Advisor+Chandler" target="_blank" class="review-link">Google</a>
+      <a href="https://www.facebook.com/miatozrealty" target="_blank" class="review-link">Facebook</a>
+      <a href="https://www.yelp.com/biz/angelo-fileccia-real-estate-advisor-southgate-2" target="_blank" class="review-link">Yelp</a>
+    </div>
+  </section>
+
+  <section class="container">
+    <h2>Connect</h2>
+    <div class="connect-grid">
+      <div class="connect-item">
+        <strong>Email</strong>
+        <a href="mailto:angelo.fileccia@gmail.com">angelo.fileccia@gmail.com</a>
+      </div>
+      <div class="connect-item">
+        <strong>Phone</strong>
+        <a href="tel:+13134050716">(313) 405-0716</a>
+      </div>
+      <div class="connect-item">
+        <strong>Instagram</strong>
+        <a href="https://www.instagram.com/angelo_fileccia/" target="_blank">@angelo_fileccia</a>
+      </div>
+      <div class="connect-item">
+        <strong>LinkedIn</strong>
+        <a href="https://www.linkedin.com/in/angelofileccia" target="_blank">linkedin.com/in/angelofileccia</a>
+      </div>
+      <div class="connect-item">
+        <strong>Threads</strong>
+        <a href="https://www.threads.com/@angelo_fileccia" target="_blank">@angelo_fileccia</a>
+      </div>
+      <div class="connect-item">
+        <strong>Facebook</strong>
+        <a href="https://www.facebook.com/miatozrealty" target="_blank">Angelo Fileccia, Real Estate Advisor</a>
+      </div>
+      <div class="connect-item">
+        <strong>Pinterest</strong>
+        <a href="https://www.pinterest.com/Angelo_Fileccia/" target="_blank">@Angelo_Fileccia</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <img src="assets/logo.jpg" alt="Angelo Fileccia logo" class="footer-logo">
+    <p>© 2026 Angelo Fileccia, Real Estate Advisor</p>
+    <p>
+      <a href="/angelo-fileccia-privacy.html">Privacy</a> ·
+      <a href="/terms.html">Terms</a> ·
+      <a href="/datadeletion.html">Data Deletion</a>
+    </p>
+  </footer>
+
+</body>
+</html>
